@@ -58,6 +58,7 @@ flutter doctor
 
 ### b. Tambahkan Android SDK ke PATH
 #### Windows:
+![image](https://github.com/user-attachments/assets/774f4eaa-0a16-43b3-9eca-8533aa28addc)
 1. Tambahkan `C:\Android\cmdline-tools\bin` ke Path pada Environment Variables.
 
 #### macOS/Linux:
