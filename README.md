@@ -42,6 +42,7 @@ Buka terminal atau command prompt dan jalankan:
 flutter doctor
 ```
 
+
 ## 2. Install Android SDK (Tanpa Android Studio)
 
 ### a. Download Android Command Line Tools
