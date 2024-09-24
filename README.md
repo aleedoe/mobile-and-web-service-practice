@@ -41,6 +41,7 @@ Halo! Pada tutorial ini, saya akan membuat langkah-langkah untuk menginstal Flut
     ```
 
 ### c. Verifikasi Instalasi
+![image](https://github.com/user-attachments/assets/87d9e2b4-202e-4572-837d-ae6ecd78bb1b)
 Buka terminal atau command prompt dan jalankan:
 ```bash
 flutter doctor
