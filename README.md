@@ -41,3 +41,52 @@ Buka terminal atau command prompt dan jalankan:
 ```bash
 flutter doctor
 ```
+
+## 2. Install Android SDK (Tanpa Android Studio)
+
+### a. Download Android Command Line Tools
+1. Buka [Android Command Line Tools](https://developer.android.com/studio#command-tools) dan download sesuai sistem operasi.
+2. Ekstrak ke folder seperti `C:\Android\cmdline-tools` (untuk Windows) atau `~/Android/cmdline-tools` (untuk macOS/Linux).
+
+### b. Tambahkan Android SDK ke PATH
+#### Windows:
+1. Tambahkan `C:\Android\cmdline-tools\bin` ke Path pada Environment Variables.
+
+#### macOS/Linux:
+1. Tambahkan baris berikut ke `~/.bashrc` atau `~/.zshrc`:
+    ```bash
+    export ANDROID_HOME=$HOME/Android
+    export PATH=$PATH:$ANDROID_HOME/cmdline-tools/bin
+    ```
+2. Simpan dan jalankan:
+    ```bash
+    source ~/.bashrc   # atau source ~/.zshrc
+    ```
+
+### c. Install SDK dan Tools yang Diperlukan
+1. Buka terminal atau command prompt, jalankan:
+    ```bash
+    sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.0"
+    ```
+
+### d. Setujui Lisensi Android SDK
+1. Setujui lisensi Android SDK dengan menjalankan:
+    ```bash
+    sdkmanager --licenses
+    ```
+
+## 3. Konfigurasi Emulator Android
+### a. Install AVD Manager
+    ```bash
+    sdkmanager --install "emulator" "system-images;android-33;google_apis;x86_64"
+    ```
+
+### b. Buat Emulator
+    ```bash
+    avdmanager create avd -n flutter_emulator -k "system-images;android-33;google_apis;x86_64"
+    ```
+
+### c. Jalankan Emulator
+    ```bash
+    emulator -avd flutter_emulator
+    ```
