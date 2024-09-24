@@ -48,6 +48,9 @@ flutter doctor
 ## 2. Install Android SDK (Tanpa Android Studio)
 
 ### a. Download Android Command Line Tools
+
+![image](https://github.com/user-attachments/assets/6278e723-cb7b-4eec-a483-a5b71836fe98)
+
 1. Buka [Android Command Line Tools](https://developer.android.com/studio#command-tools) dan download sesuai sistem operasi.
 2. Ekstrak ke folder seperti `C:\Android\cmdline-tools` (untuk Windows) atau `~/Android/cmdline-tools` (untuk macOS/Linux).
 
