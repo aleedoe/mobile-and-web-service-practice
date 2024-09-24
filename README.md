@@ -13,6 +13,8 @@ Halo! Pada tutorial ini, saya akan membuat langkah-langkah untuk menginstal Flut
 
 ## 1. Install Flutter SDK
 
+![image](https://github.com/user-attachments/assets/08c759bb-ab55-4e99-9ca4-7e97abed9d7d)
+
 ### a. Download Flutter SDK
 1. Buka halaman [Flutter SDK](https://flutter.dev/docs/get-started/install).
 2. Pilih sistem operasi (Windows, macOS, atau Linux).
