@@ -1,7 +1,7 @@
 # Tutorial: Install Flutter Tanpa Android Studio dan Menjalankan "Hello World!"
 
 ## Pendahuluan
-Halo! Pada tutorial ini, saya akan memandu kalian langkah demi langkah untuk menginstal Flutter **tanpa menggunakan Android Studio** dan menjalankan aplikasi Flutter sederhana yang menampilkan "Hello World!".
+Halo! Pada tutorial ini, saya akan membuat langkah-langkah untuk menginstal Flutter **tanpa menggunakan Android Studio** dan menjalankan aplikasi Flutter sederhana yang menampilkan "Hello World!".
 
 ## Persyaratan
 - Sistem operasi: **Windows**, **macOS**, atau **Linux**
@@ -15,8 +15,8 @@ Halo! Pada tutorial ini, saya akan memandu kalian langkah demi langkah untuk men
 
 ### a. Download Flutter SDK
 1. Buka halaman [Flutter SDK](https://flutter.dev/docs/get-started/install).
-2. Pilih sistem operasi kalian (Windows, macOS, atau Linux).
-3. Download Flutter SDK dan ekstrak ke folder yang kalian inginkan. Misalnya, `C:\src\flutter` untuk Windows atau `~/flutter` untuk macOS/Linux.
+2. Pilih sistem operasi (Windows, macOS, atau Linux).
+3. Download Flutter SDK dan ekstrak ke folder yang di inginkan. Misalnya, `C:\src\flutter` untuk Windows atau `~/flutter` untuk macOS/Linux.
 
 ### b. Tambahkan Flutter ke PATH
 #### Windows:
@@ -41,7 +41,6 @@ Buka terminal atau command prompt dan jalankan:
 ```bash
 flutter doctor
 ```
-
 
 ## 2. Install Android SDK (Tanpa Android Studio)
 
@@ -77,6 +76,7 @@ flutter doctor
     ```
 
 ## 3. Konfigurasi Emulator Android
+
 ### a. Install AVD Manager
     ```bash
     sdkmanager --install "emulator" "system-images;android-33;google_apis;x86_64"
@@ -90,4 +90,59 @@ flutter doctor
 ### c. Jalankan Emulator
     ```bash
     emulator -avd flutter_emulator
+    ```
+
+## 4. Membuat dan Menjalankan Proyek Flutter
+
+### a. Buat Proyek Flutter
+Buka terminal dan arahkan ke folder tempat yang ingin menyimpan proyek, lalu jalankan:
+
+    ```bash
+    flutter create hello_world
+    cd hello_world
+    ```
+
+### b. Jalankan Proyek
+Jika menggunakan emulator atau perangkat Android yang sudah terhubung, jalankan perintah berikut untuk menjalankan aplikasi:
+
+    ```bash
+    flutter run
+    ```
+
+## 5. Modifikasi "Hello World!"
+Buka file lib/main.dart di editor teks dan ubah kode menjadi seperti ini untuk menampilkan teks "Hello World!":
+
+    ```bash
+    import 'package:flutter/material.dart';
+
+    void main() {
+    runApp(MyApp());
+    }
+
+    class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return MaterialApp(
+        title: 'Flutter Demo',
+        home: MyHomePage(),
+        );
+    }
+    }
+
+    class MyHomePage extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+        appBar: AppBar(
+            title: Text('Hello World App'),
+        ),
+        body: Center(
+            child: Text(
+            'Hello World!',
+            style: TextStyle(fontSize: 24),
+            ),
+        ),
+        );
+    }
+    }
     ```
