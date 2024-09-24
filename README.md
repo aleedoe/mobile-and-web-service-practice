@@ -77,12 +77,14 @@ flutter doctor
     ```bash
     sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.0"
     ```
+    ![image](https://github.com/user-attachments/assets/009cb44a-4b7f-49b0-84e0-1180efc3f061)
 
 ### d. Setujui Lisensi Android SDK
 1. Setujui lisensi Android SDK dengan menjalankan:
     ```bash
     sdkmanager --licenses
     ```
+    ![image](https://github.com/user-attachments/assets/5d2e4ae7-4d34-4250-ada3-ea5750892097)
 
 ## 3. Konfigurasi Emulator Android
 
