@@ -23,6 +23,7 @@ Halo! Pada tutorial ini, saya akan membuat langkah-langkah untuk menginstal Flut
 
 ### b. Tambahkan Flutter ke PATH
 #### Windows:
+![image](https://github.com/user-attachments/assets/adf4f834-fe7a-4c70-8477-6613db3e8beb)
 1. Buka **Control Panel** > **System and Security** > **System**.
 2. Pilih **Advanced system settings**, klik **Environment Variables**.
 3. Pada **User variables**, pilih **Path** dan klik **Edit**.
