@@ -29,17 +29,6 @@ Halo! Pada tutorial ini, saya akan membuat langkah-langkah untuk menginstal Flut
 3. Pada **User variables**, pilih **Path** dan klik **Edit**.
 4. Tambahkan direktori Flutter `C:\src\flutter\bin` dan klik **OK**.
 
-#### macOS/Linux:
-1. Buka terminal dan edit file `~/.bashrc` atau `~/.zshrc`.
-2. Tambahkan baris berikut:
-    ```bash
-    export PATH="$PATH:/path/to/flutter/bin"
-    ```
-3. Simpan file dan jalankan:
-    ```bash
-    source ~/.bashrc
-    ```
-
 ### c. Verifikasi Instalasi
 ![image](https://github.com/user-attachments/assets/87d9e2b4-202e-4572-837d-ae6ecd78bb1b)
 Buka terminal atau command prompt dan jalankan:
@@ -61,16 +50,6 @@ flutter doctor
 ![image](https://github.com/user-attachments/assets/774f4eaa-0a16-43b3-9eca-8533aa28addc)
 1. Tambahkan `C:\Android\cmdline-tools\bin` ke Path pada Environment Variables.
 
-#### macOS/Linux:
-1. Tambahkan baris berikut ke `~/.bashrc` atau `~/.zshrc`:
-    ```bash
-    export ANDROID_HOME=$HOME/Android
-    export PATH=$PATH:$ANDROID_HOME/cmdline-tools/bin
-    ```
-2. Simpan dan jalankan:
-    ```bash
-    source ~/.bashrc   # atau source ~/.zshrc
-    ```
 
 ### c. Install SDK dan Tools yang Diperlukan
 1. Buka terminal atau command prompt, jalankan:
