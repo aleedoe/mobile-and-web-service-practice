@@ -1,4 +1,4 @@
-## Identitas
+## IDENTITAS
 - Nama : Mushyafa Ali
 - NPM : 5220411358
 - Deskripsi : repositori ini berisi mengenai hasil pembelajaran dari mata kuliah Mobile & Web Service Praktek
@@ -8,7 +8,7 @@
 # Materi Pengantar
 Mobile Service dan Web Service adalah istilah yang sering digunakan dalam pengembangan aplikasi yang berfokus pada komunikasi antar sistem melalui jaringan. Keduanya memiliki tujuan yang sama, yaitu menyediakan layanan atau fungsi tertentu kepada pengguna, tetapi berbeda dalam hal platform dan cara pengoperasiannya.
 
-##1. Mobile Service
+## 1. Mobile Service
 Mobile service mengacu pada layanan yang dirancang untuk perangkat mobile seperti smartphone dan tablet. Ini bisa mencakup berbagai bentuk layanan, baik berbasis internet maupun tidak, dan sering kali melibatkan aplikasi yang berfungsi pada platform mobile (seperti Android atau iOS).
 
 Jenis-Jenis Mobile Service:
