@@ -27,3 +27,8 @@ Karakteristik Web Service:
 - **Berbasis Protokol Standar**: Web service biasanya menggunakan HTTP, SOAP, atau RESTful APIs untuk komunikasi. RESTful API cenderung lebih banyak digunakan karena lebih sederhana dan lebih fleksibel dibandingkan SOAP.
 - **Platform Agnostic**: Web service bisa diakses dari berbagai jenis platform atau perangkat (desktop, mobile, tablet) tanpa tergantung pada sistem operasi atau bahasa pemrograman tertentu.
 - **Data Format**: Web service sering kali menggunakan format data standar seperti XML atau JSON untuk pertukaran data antar aplikasi.
+
+Jenis-Jenis Web Service:
+
+- **SOAP (Simple Object Access Protocol)**: Protokol yang lebih tua dan formal untuk pertukaran informasi yang menggunakan XML dan biasanya digunakan dalam aplikasi yang membutuhkan transaksi yang aman dan kompleks.
+- **REST (Representational State Transfer)**: Arsitektur layanan web yang lebih ringan dan lebih umum digunakan dalam pengembangan API modern. REST menggunakan HTTP dan sering kali dikombinasikan dengan format data JSON untuk pertukaran data yang cepat dan mudah dipahami.
