@@ -43,3 +43,15 @@ Jenis-Jenis Web Service:
 | Penggunaan Data   | Bisa online atau offline (dalam beberapa kasus)     | Selalu membutuhkan koneksi internet                   |
 | Akses             | Dijalankan oleh aplikasi mobile yang diunduh        | Diakses melalui HTTP request dari berbagai jenis aplikasi |
 
+## Bahasa Pemrograman
+
+a. Bahasa Pemrograman untuk Mobile Service
+  - **Java**: Bahasa pemrograman utama untuk pengembangan aplikasi Android. Banyak library dan framework yang tersedia untuk membuat aplikasi yang efisien dan scalable.
+
+  - **Kotlin**: Alternatif modern untuk Java, Kotlin dirancang oleh JetBrains dan merupakan bahasa resmi untuk pengembangan Android. Kotlin lebih ringkas dan aman dari kesalahan null pointer dibandingkan dengan Java.
+
+  - **Swift**: Digunakan untuk pengembangan aplikasi iOS. Swift adalah bahasa yang dirancang oleh Apple dan merupakan penerus dari Objective-C, menawarkan sintaks yang lebih sederhana dan performa yang lebih baik untuk aplikasi mobile di ekosistem Apple.
+
+  - **Dart**: Bahasa pemrograman yang digunakan bersama dengan Flutter framework. Dart menawarkan performa yang cepat dan cocok untuk pengembangan aplikasi mobile cross-platform, artinya satu kode bisa dijalankan baik di Android maupun iOS.
+
+  - **JavaScript/TypeScript**: Meskipun bukan bahasa asli untuk pengembangan mobile, JavaScript dan TypeScript digunakan dalam framework mobile cross-platform seperti React Native dan Ionic untuk membangun aplikasi mobile yang bisa berjalan di Android dan iOS.
