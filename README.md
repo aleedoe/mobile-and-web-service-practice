@@ -32,3 +32,14 @@ Jenis-Jenis Web Service:
 
 - **SOAP (Simple Object Access Protocol)**: Protokol yang lebih tua dan formal untuk pertukaran informasi yang menggunakan XML dan biasanya digunakan dalam aplikasi yang membutuhkan transaksi yang aman dan kompleks.
 - **REST (Representational State Transfer)**: Arsitektur layanan web yang lebih ringan dan lebih umum digunakan dalam pengembangan API modern. REST menggunakan HTTP dan sering kali dikombinasikan dengan format data JSON untuk pertukaran data yang cepat dan mudah dipahami.
+
+
+## Perbandingan Mobile Service dan Web Service
+| Aspek             | Mobile Service                                      | Web Service                                           |
+|-------------------|-----------------------------------------------------|-------------------------------------------------------|
+| Platform          | Berfokus pada perangkat mobile (Android, iOS)       | Tidak bergantung pada platform tertentu (web, mobile, desktop) |
+| Contoh Teknologi  | Android SDK, iOS SDK, Firebase, Push Notifications  | RESTful API, SOAP, HTTP, JSON, XML                    |
+| Pengguna          | Aplikasi mobile yang dijalankan di smartphone/tablet| Aplikasi apa pun yang terhubung ke internet           |
+| Penggunaan Data   | Bisa online atau offline (dalam beberapa kasus)     | Selalu membutuhkan koneksi internet                   |
+| Akses             | Dijalankan oleh aplikasi mobile yang diunduh        | Diakses melalui HTTP request dari berbagai jenis aplikasi |
+
