@@ -1,7 +1,7 @@
 ## IDENTITAS
 - Nama : Mushyafa Ali
 - NPM : 5220411358
-- Deskripsi : repositori ini berisi mengenai hasil pembelajaran dari mata kuliah Mobile & Web Service Praktek
+- Deskripsi : repositori ini berisi mengenai hasil pembelajaran dari mata kuliah **Mobile & Web Service Praktek**
 - Untuk hasil pembelajaran pada tiap pertemuan perkuliahan itu ada di **sub branch** yang bernama `pertemuan-n`
 
 ---
