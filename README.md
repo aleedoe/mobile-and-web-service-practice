@@ -45,7 +45,7 @@ Jenis-Jenis Web Service:
 
 ## Bahasa Pemrograman
 
-a. Bahasa Pemrograman untuk Mobile Service
+- Bahasa Pemrograman untuk Mobile Service
   - **Java**: Bahasa pemrograman utama untuk pengembangan aplikasi Android. Banyak library dan framework yang tersedia untuk membuat aplikasi yang efisien dan scalable.
 
   - **Kotlin**: Alternatif modern untuk Java, Kotlin dirancang oleh JetBrains dan merupakan bahasa resmi untuk pengembangan Android. Kotlin lebih ringkas dan aman dari kesalahan null pointer dibandingkan dengan Java.
