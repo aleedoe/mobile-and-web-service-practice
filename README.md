@@ -68,71 +68,71 @@ flutter doctor
 ## 3. Konfigurasi Emulator Android
 
 ### a. Install AVD Manager
-    ```bash
-    sdkmanager --install "emulator" "system-images;android-33;google_apis;x86_64"
-    ```
+```bash
+sdkmanager --install "emulator" "system-images;android-33;google_apis;x86_64"
+```
 
 ### b. Buat Emulator
-    ```bash
-    avdmanager create avd -n flutter_emulator -k "system-images;android-33;google_apis;x86_64"
-    ```
+```bash
+avdmanager create avd -n flutter_emulator -k "system-images;android-33;google_apis;x86_64"
+```
 
 ### c. Jalankan Emulator
-    ```bash
-    emulator -avd flutter_emulator
-    ```
+```bash
+emulator -avd flutter_emulator
+```
 
 ## 4. Membuat dan Menjalankan Proyek Flutter
 
 ### a. Buat Proyek Flutter
 Buka terminal dan arahkan ke folder tempat yang ingin menyimpan proyek, lalu jalankan:
 
-    ```bash
-    flutter create hello_world
-    cd hello_world
-    ```
+```bash
+flutter create hello_world
+cd hello_world
+```
 
 ### b. Jalankan Proyek
 Jika menggunakan emulator atau perangkat Android yang sudah terhubung, jalankan perintah berikut untuk menjalankan aplikasi:
 
-    ```bash
-    flutter run
-    ```
+```bash
+flutter run
+```
 
 ## 5. Modifikasi "Hello World!"
 Buka file lib/main.dart di editor teks dan ubah kode menjadi seperti ini untuk menampilkan teks "Hello World!":
 
-    ```bash
-    import 'package:flutter/material.dart';
+```bash
+import 'package:flutter/material.dart';
 
-    void main() {
-    runApp(MyApp());
-    }
+void main() {
+runApp(MyApp());
+}
 
-    class MyApp extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-        title: 'Flutter Demo',
-        home: MyHomePage(),
-        );
-    }
-    }
+class MyApp extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+    return MaterialApp(
+    title: 'Flutter Demo',
+    home: MyHomePage(),
+    );
+}
+}
 
-    class MyHomePage extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-        appBar: AppBar(
-            title: Text('Hello World App'),
+class MyHomePage extends StatelessWidget {
+@override
+Widget build(BuildContext context) {
+    return Scaffold(
+    appBar: AppBar(
+        title: Text('Hello World App'),
+    ),
+    body: Center(
+        child: Text(
+        'Hello World!',
+        style: TextStyle(fontSize: 24),
         ),
-        body: Center(
-            child: Text(
-            'Hello World!',
-            style: TextStyle(fontSize: 24),
-            ),
-        ),
-        );
-    }
-    }
-    ```
+    ),
+    );
+}
+}
+```
