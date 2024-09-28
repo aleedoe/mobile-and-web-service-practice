@@ -63,7 +63,7 @@ flutter doctor
     ```bash
     sdkmanager --sdk_root="C:\Users\<your-username>\AppData\Local\Android\Sdk" --licenses
     ```
-    ![image](https://github.com/user-attachments/assets/5d2e4ae7-4d34-4250-ada3-ea5750892097)
+    ![image](https://github.com/user-attachments/assets/89790759-b5c9-4079-8d09-df448c0cd2dd)
 
 ## 3. Konfigurasi Emulator Android
 
