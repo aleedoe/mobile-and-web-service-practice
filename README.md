@@ -61,7 +61,7 @@ flutter doctor
 ### d. Setujui Lisensi Android SDK
 1. Setujui lisensi Android SDK dengan menjalankan:
     ```bash
-    sdkmanager --licenses
+    sdkmanager --sdk_root="C:\Users\<your-username>\AppData\Local\Android\Sdk" --licenses
     ```
     ![image](https://github.com/user-attachments/assets/5d2e4ae7-4d34-4250-ada3-ea5750892097)
 
