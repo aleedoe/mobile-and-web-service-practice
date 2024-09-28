@@ -61,7 +61,7 @@ flutter doctor
 ### d. Setujui Lisensi Android SDK
 1. Setujui lisensi Android SDK dengan menjalankan:
     ```bash
-    sdkmanager --sdk_root="C:\Users\<your-username>\AppData\Local\Android\Sdk" --licenses
+    sdkmanager --sdk_root="C:\path\to\your\android\sdk" --licenses
     ```
     ![image](https://github.com/user-attachments/assets/89790759-b5c9-4079-8d09-df448c0cd2dd)
 
@@ -69,7 +69,7 @@ flutter doctor
 
 ### a. Install AVD Manager
 ```bash
-sdkmanager --install "emulator" "system-images;android-33;google_apis;x86_64"
+sdkmanager --sdk_root="C:\path\to\your\android\sdk" --install "emulator" "system-images;android-33;google_apis;x86_64"
 ```
 
 ### b. Buat Emulator
