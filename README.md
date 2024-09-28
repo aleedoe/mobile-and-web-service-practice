@@ -54,9 +54,9 @@ flutter doctor
 ### c. Install SDK dan Tools yang Diperlukan
 1. Buka terminal atau command prompt, jalankan:
     ```bash
-    sdkmanager --install "platform-tools" "platforms;android-33" "build-tools;33.0.0"
+    sdkmanager --sdk_root="C:\path\to\your\android\sdk" --install "platform-tools" "platforms;android-33" "build-tools;33.0.0"
     ```
-    ![image](https://github.com/user-attachments/assets/009cb44a-4b7f-49b0-84e0-1180efc3f061)
+    ![image](https://github.com/user-attachments/assets/cecb6949-5c13-41d8-9e14-2be92b76d0ec)
 
 ### d. Setujui Lisensi Android SDK
 1. Setujui lisensi Android SDK dengan menjalankan:
