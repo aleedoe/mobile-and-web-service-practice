@@ -130,17 +130,20 @@ Sekarang, mari kita buat Stateful Widget yang dapat berubah selama aplikasi berj
 ## 4. Berbagai Jenis Widget di Flutter
 Berikut adalah beberapa jenis widget penting yang sering digunakan:
 
-### a. **Text Widget**: Menampilkan teks di layar.
+### a. **Text Widget**
+Menampilkan teks di layar.
 ```dart
 Text('Ini adalah teks')
 ```
 
-### b. **Image Widget**: Menampilkan gambar.
+### b. **Image Widget**
+Menampilkan gambar.
 ```dart
 Image.network('https://example.com/image.png')
 ```
 
-### c. **Button Widget**: Menambahkan tombol dengan beberapa varian, seperti `ElevatedButton`, `TextButton`, atau `IconButton`.
+### c. **Button Widget**
+Menambahkan tombol dengan beberapa varian, seperti `ElevatedButton`, `TextButton`, atau `IconButton`.
 ```dart
 ElevatedButton(
 onPressed: () {},
@@ -148,7 +151,8 @@ child: Text('Tombol'),
 )
 ```
 
-### d. **Container Widget**: Widget dasar untuk menampung dan mengatur tata letak.
+### d. **Container Widget**
+Widget dasar untuk menampung dan mengatur tata letak.
 ```dart
 Container(
 padding: EdgeInsets.all(16),
@@ -158,7 +162,8 @@ child: Text('Ini adalah container'),
 )
 ```
 
-### e. **Row dan Column Widget**: Digunakan untuk mengatur widget secara horizontal (`Row`) atau vertikal (`Column`).
+### e. **Row dan Colum Widget**
+Digunakan untuk mengatur widget secara horizontal (`Row`) atau vertikal (`Column`).
 ```dart
 Column(
 children: [
@@ -169,7 +174,8 @@ children: [
 )
 ```
 
-### f. **ListView Widget**: Digunakan untuk membuat daftar item yang dapat di-scroll.
+### f. **ListView Widget**
+Digunakan untuk membuat daftar item yang dapat di-scroll.
 
 ```dart
 ListView(
