@@ -15,7 +15,7 @@ Widget di Flutter bisa diibaratkan sebagai "blok bangunan" antarmuka aplikasi. S
 Mari kita mulai dengan membuat **Stateless Widget** yang merupakan widget yang tidak memiliki status internal.
 
 - Langkah 1: Buka `lib/main.dart` dan modifikasi kode sebagai berikut:
-    ```bash
+    ```dart
     import 'package:flutter/material.dart';
 
     void main() {
@@ -65,3 +65,12 @@ Mari kita mulai dengan membuat **Stateless Widget** yang merupakan widget yang t
     flutter run -d chrome
     ```
     Ini akan mem-build dan menjalankan aplikasi di emulator atau perangkat fisik yang terhubung. Anda akan melihat tampilan aplikasi dengan teks "Hello, Flutter!".
+
+
+## 3. Membuat Stateful Widget
+Sekarang, mari kita buat Stateful Widget yang dapat berubah selama aplikasi berjalan. Misalnya, kita akan membuat tombol yang mengubah teks saat diklik.
+
+- Langkah 1: Modifikasi `lib/main.dart` menjadi seperti berikut:
+```bash
+
+```
