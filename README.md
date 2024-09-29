@@ -92,13 +92,15 @@ Buka terminal dan arahkan ke folder tempat yang ingin menyimpan proyek, lalu jal
 flutter create hello_world
 cd hello_world
 ```
+![image](https://github.com/user-attachments/assets/00e11394-049a-4acb-baf9-90463263594a)
 
 ### b. Jalankan Proyek
 Jika menggunakan emulator atau perangkat Android yang sudah terhubung, jalankan perintah berikut untuk menjalankan aplikasi:
 
 ```bash
-flutter run
+flutter run -d chrome
 ```
+![image](https://github.com/user-attachments/assets/bcdcf05d-8c48-4bc1-b7d1-9326448f23a7)
 
 ## 5. Modifikasi "Hello World!"
 Buka file lib/main.dart di editor teks dan ubah kode menjadi seperti ini untuk menampilkan teks "Hello World!":
