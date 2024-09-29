@@ -131,44 +131,43 @@ Sekarang, mari kita buat Stateful Widget yang dapat berubah selama aplikasi berj
 Berikut adalah beberapa jenis widget penting yang sering digunakan:
 
 ### a. Text Widget: Menampilkan teks di layar.
-
-    ```dart
-    Text('Ini adalah teks')
-    ```
+```dart
+Text('Ini adalah teks')
+```
 
 ### b. Image Widget: Menampilkan gambar.
-    ```dart
-    Image.network('https://example.com/image.png')
-    ```
+```dart
+Image.network('https://example.com/image.png')
+```
 
 ### c. Button Widget: Menambahkan tombol dengan beberapa varian, seperti ElevatedButton, TextButton, atau IconButton.
-    ```dart
-    ElevatedButton(
-    onPressed: () {},
-    child: Text('Tombol'),
-    )
-    ```
+```dart
+ElevatedButton(
+onPressed: () {},
+child: Text('Tombol'),
+)
+```
 
 ### d. Container Widget: Widget dasar untuk menampung dan mengatur tata letak.
-    ```dart
-    Container(
-    padding: EdgeInsets.all(16),
-    margin: EdgeInsets.all(8),
-    color: Colors.blue,
-    child: Text('Ini adalah container'),
-    )
-    ```
+```dart
+Container(
+padding: EdgeInsets.all(16),
+margin: EdgeInsets.all(8),
+color: Colors.blue,
+child: Text('Ini adalah container'),
+)
+```
 
 ### e. Row dan Column Widget: Digunakan untuk mengatur widget secara horizontal (Row) atau vertikal (Column).
-    ```dart
-    Column(
-    children: [
-        Text('Item 1'),
-        Text('Item 2'),
-        Text('Item 3'),
-    ],
-    )
-    ```
+```dart
+Column(
+children: [
+    Text('Item 1'),
+    Text('Item 2'),
+    Text('Item 3'),
+],
+)
+```
 
 ### f. ListView Widget: Digunakan untuk membuat daftar item yang dapat di-scroll.
 
