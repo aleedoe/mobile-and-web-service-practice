@@ -109,33 +109,42 @@ Buka file lib/main.dart di editor teks dan ubah kode menjadi seperti ini untuk m
 import 'package:flutter/material.dart';
 
 void main() {
-runApp(MyApp());
+  runApp(const MyApp()); // Tambahkan const di sini
 }
 
 class MyApp extends StatelessWidget {
-@override
-Widget build(BuildContext context) {
+  const MyApp({super.key}); // Konstruktor menggunakan const
+
+  @override
+  Widget build(BuildContext context) {
     return MaterialApp(
-    title: 'Flutter Demo',
-    home: MyHomePage(),
+      title: 'Flutter Demo',
+      home: const MyHomePage(),
     );
-}
+  }
 }
 
 class MyHomePage extends StatelessWidget {
-@override
-Widget build(BuildContext context) {
+  const MyHomePage({super.key}); // Konstruktor menggunakan const
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(
-        title: Text('Hello World App'),
-    ),
-    body: Center(
+      appBar: AppBar(
+        title: const Text('Hello World App'), // Tambahkan const di sini
+      ),
+      body: const Center(
         child: Text(
-        'Hello World!',
-        style: TextStyle(fontSize: 24),
+          'Hello World!',
+          style: TextStyle(fontSize: 24),
         ),
-    ),
+      ),
     );
+  }
 }
-}
+
 ```
+
+![image](https://github.com/user-attachments/assets/cf2706fb-1cc4-4fa9-97b5-617a1abf0d25)
+
+
