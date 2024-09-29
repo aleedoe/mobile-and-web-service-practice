@@ -54,7 +54,6 @@ Mari kita mulai dengan membuat **Stateless Widget** yang merupakan widget yang t
     }
 
     ```
-
     Penjelasan Kode:
     - `MyApp` adalah widget yang mewarisi `StatelessWidget`. Di sini kita mendefinisikan bagaimana UI akan dibangun melalui metode `build()`.
     - `MaterialApp` adalah widget yang menyediakan struktur dasar untuk aplikasi, seperti tema dan navigasi.
@@ -71,51 +70,59 @@ Mari kita mulai dengan membuat **Stateless Widget** yang merupakan widget yang t
 Sekarang, mari kita buat Stateful Widget yang dapat berubah selama aplikasi berjalan. Misalnya, kita akan membuat tombol yang mengubah teks saat diklik.
 
 - Langkah 1: Modifikasi `lib/main.dart` menjadi seperti berikut:
-```dart
-    import 'package:flutter/material.dart';
+    ```dart
+        import 'package:flutter/material.dart';
 
-    void main() {
-    runApp( const MyStatefulApp());
-    }
+        void main() {
+        runApp( const MyStatefulApp());
+        }
 
-    class MyStatefulApp extends StatefulWidget {
-    const MyStatefulApp({super.key});
+        class MyStatefulApp extends StatefulWidget {
+        const MyStatefulApp({super.key});
 
-    @override
-    MyStatefulAppState createState() => MyStatefulAppState();
-    }
+        @override
+        MyStatefulAppState createState() => MyStatefulAppState();
+        }
 
-    class MyStatefulAppState extends State<MyStatefulApp> {
-    String message = 'Tekan tombol di bawah';
+        class MyStatefulAppState extends State<MyStatefulApp> {
+        String message = 'Tekan tombol di bawah';
 
-    void _changeMessage() {
-        setState(() {
-        message = 'Tombol telah ditekan!';
-        });
-    }
+        void _changeMessage() {
+            setState(() {
+            message = 'Tombol telah ditekan!';
+            });
+        }
 
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
-            title: const Text('Flutter Stateful Widget'),
-            ),
-            body: Center(
-            child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                Text(message),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                    onPressed: _changeMessage,
-                    child: const Text('Tekan Saya'),
+        @override
+        Widget build(BuildContext context) {
+            return MaterialApp(
+            home: Scaffold(
+                appBar: AppBar(
+                title: const Text('Flutter Stateful Widget'),
                 ),
-                ],
+                body: Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                    Text(message),
+                    const SizedBox(height: 20),
+                    ElevatedButton(
+                        onPressed: _changeMessage,
+                        child: const Text('Tekan Saya'),
+                    ),
+                    ],
+                ),
+                ),
             ),
-            ),
-        ),
-        );
-    }
-    }
-```
+            );
+        }
+        }
+    ```
+    Penjelasan Kode:
+    - `MyStatefulApp` adalah widget yang mewarisi StatefulWidget. Ini memiliki metode createState() untuk mengaitkan widget dengan statusnya.
+    - `MyStatefulAppState` adalah kelas status yang berisi logika perubahan status.
+    - `setState()` digunakan untuk memberitahukan bahwa status widget telah berubah, sehingga UI akan di-rebuild.
+
+    Hasil:
+    ![image](https://github.com/user-attachments/assets/6f4b9367-5faa-46bc-b43b-0da0b73b02a1)
+    
