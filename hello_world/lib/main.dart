@@ -1,34 +1,44 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp()); // Tambahkan const di sini
+  runApp( const MyStatefulApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key}); // Konstruktor menggunakan const
+class MyStatefulApp extends StatefulWidget {
+  const MyStatefulApp({super.key}); // Use super.key here
 
   @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Hello World App', // Tambahkan const di sini
-      home: MyHomePage(),
-    );
+  MyStatefulAppState createState() => MyStatefulAppState();
+}
+
+class MyStatefulAppState extends State<MyStatefulApp> {
+  String message = 'Tekan tombol di bawah';
+
+  void _changeMessage() {
+    setState(() {
+      message = 'Tombol telah ditekan!';
+    });
   }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key}); // Konstruktor menggunakan const
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Hello World App'), // Tambahkan const di sini
-      ),
-      body: const Center(
-        child: Text(
-          'Hello World!',
-          style: TextStyle(fontSize: 24),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Flutter Stateful Widget'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(message),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: _changeMessage,
+                child: const Text('Tekan Saya'),
+              ),
+            ],
+          ),
         ),
       ),
     );

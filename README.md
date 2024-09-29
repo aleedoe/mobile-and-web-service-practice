@@ -71,6 +71,6 @@ Mari kita mulai dengan membuat **Stateless Widget** yang merupakan widget yang t
 Sekarang, mari kita buat Stateful Widget yang dapat berubah selama aplikasi berjalan. Misalnya, kita akan membuat tombol yang mengubah teks saat diklik.
 
 - Langkah 1: Modifikasi `lib/main.dart` menjadi seperti berikut:
-```bash
+```dart
 
 ```
