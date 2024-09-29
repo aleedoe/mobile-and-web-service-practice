@@ -131,6 +131,7 @@ Sekarang, mari kita buat Stateful Widget yang dapat berubah selama aplikasi berj
 Berikut adalah beberapa jenis widget penting yang sering digunakan:
 
 ### a. Text Widget: Menampilkan teks di layar.
+
     ```dart
     Text('Ini adalah teks')
     ```
@@ -170,15 +171,16 @@ Berikut adalah beberapa jenis widget penting yang sering digunakan:
     ```
 
 ### f. ListView Widget: Digunakan untuk membuat daftar item yang dapat di-scroll.
-    ```dart
-    ListView(
-    children: [
-        ListTile(title: Text('Item 1')),
-        ListTile(title: Text('Item 2')),
-        ListTile(title: Text('Item 3')),
-    ],
-    )
-    ```
+
+```dart
+ListView(
+children: [
+    ListTile(title: Text('Item 1')),
+    ListTile(title: Text('Item 2')),
+    ListTile(title: Text('Item 3')),
+],
+)
+```
 
 
 
