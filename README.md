@@ -14,7 +14,7 @@ Widget di Flutter bisa diibaratkan sebagai "blok bangunan" antarmuka aplikasi. S
 ## 2. Membuat Stateless Widget
 Mari kita mulai dengan membuat **Stateless Widget** yang merupakan widget yang tidak memiliki status internal.
 
-- Langkah 1: Buka `lib/main.dart` dan modifikasi kode sebagai berikut:
+- **Langkah 1**: Buka `lib/main.dart` dan modifikasi kode sebagai berikut:
     ```dart
     import 'package:flutter/material.dart';
 
@@ -54,12 +54,12 @@ Mari kita mulai dengan membuat **Stateless Widget** yang merupakan widget yang t
     }
 
     ```
-    Penjelasan Kode:
+    **Penjelasan Kode**:
     - `MyApp` adalah widget yang mewarisi `StatelessWidget`. Di sini kita mendefinisikan bagaimana UI akan dibangun melalui metode `build()`.
     - `MaterialApp` adalah widget yang menyediakan struktur dasar untuk aplikasi, seperti tema dan navigasi.
     - `Scaffold` menyediakan struktur halaman dasar dengan AppBar dan body.
 
-- Langkah 2: Jalankan aplikasi dengan mengetik:
+- **Langkah 2**: Jalankan aplikasi dengan mengetik:
     ```bash
     flutter run -d chrome
     ```
@@ -118,11 +118,67 @@ Sekarang, mari kita buat Stateful Widget yang dapat berubah selama aplikasi berj
         }
         }
     ```
-    Penjelasan Kode:
+    **Penjelasan Kode**:
     - `MyStatefulApp` adalah widget yang mewarisi StatefulWidget. Ini memiliki metode createState() untuk mengaitkan widget dengan statusnya.
     - `MyStatefulAppState` adalah kelas status yang berisi logika perubahan status.
     - `setState()` digunakan untuk memberitahukan bahwa status widget telah berubah, sehingga UI akan di-rebuild.
 
-    Hasil:
+    **Hasil**:
     ![image](https://github.com/user-attachments/assets/6f4b9367-5faa-46bc-b43b-0da0b73b02a1)
-    
+
+
+## 4. Berbagai Jenis Widget di Flutter
+Berikut adalah beberapa jenis widget penting yang sering digunakan:
+
+### a. Text Widget: Menampilkan teks di layar.
+    ```dart
+    Text('Ini adalah teks')
+    ```
+
+### b. Image Widget: Menampilkan gambar.
+    ```dart
+    Image.network('https://example.com/image.png')
+    ```
+
+### c. Button Widget: Menambahkan tombol dengan beberapa varian, seperti ElevatedButton, TextButton, atau IconButton.
+    ```dart
+    ElevatedButton(
+    onPressed: () {},
+    child: Text('Tombol'),
+    )
+    ```
+
+### d. Container Widget: Widget dasar untuk menampung dan mengatur tata letak.
+    ```dart
+    Container(
+    padding: EdgeInsets.all(16),
+    margin: EdgeInsets.all(8),
+    color: Colors.blue,
+    child: Text('Ini adalah container'),
+    )
+    ```
+
+### e. Row dan Column Widget: Digunakan untuk mengatur widget secara horizontal (Row) atau vertikal (Column).
+    ```dart
+    Column(
+    children: [
+        Text('Item 1'),
+        Text('Item 2'),
+        Text('Item 3'),
+    ],
+    )
+    ```
+
+### f. ListView Widget: Digunakan untuk membuat daftar item yang dapat di-scroll.
+    ```dart
+    ListView(
+    children: [
+        ListTile(title: Text('Item 1')),
+        ListTile(title: Text('Item 2')),
+        ListTile(title: Text('Item 3')),
+    ],
+    )
+    ```
+
+
+
