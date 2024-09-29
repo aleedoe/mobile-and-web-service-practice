@@ -54,3 +54,13 @@ Mari kita mulai dengan membuat **Stateless Widget** yang merupakan widget yang t
     }
 
     ```
+
+    Penjelasan Kode:
+    - `MyApp` adalah widget yang mewarisi `StatelessWidget`. Di sini kita mendefinisikan bagaimana UI akan dibangun melalui metode `build()`.
+    - `MaterialApp` adalah widget yang menyediakan struktur dasar untuk aplikasi, seperti tema dan navigasi.
+    - `Scaffold` menyediakan struktur halaman dasar dengan AppBar dan body.
+
+- Langkah 2: Jalankan aplikasi dengan mengetik:
+    ```bash
+    flutter run -d chrome
+    ```
