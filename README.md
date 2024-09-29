@@ -68,6 +68,7 @@ flutter doctor
 ## 3. Konfigurasi Emulator Android
 
 ### a. Install AVD Manager
+![image](https://github.com/user-attachments/assets/955698dd-c399-4573-814a-dfca6ec7fdaf)
 ```bash
 sdkmanager --sdk_root="C:\path\to\your\android\sdk" --install "emulator" "system-images;android-33;google_apis;x86_64"
 ```
