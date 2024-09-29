@@ -5,7 +5,7 @@ void main() {
 }
 
 class MyStatefulApp extends StatefulWidget {
-  const MyStatefulApp({super.key}); // Use super.key here
+  const MyStatefulApp({super.key});
 
   @override
   MyStatefulAppState createState() => MyStatefulAppState();

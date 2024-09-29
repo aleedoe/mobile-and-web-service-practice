@@ -19,29 +19,29 @@ Mari kita mulai dengan membuat **Stateless Widget** yang merupakan widget yang t
     import 'package:flutter/material.dart';
 
     void main() {
-    runApp(const MyApp()); // Tambahkan const di sini
+    runApp(const MyApp()); 
     }
 
     class MyApp extends StatelessWidget {
-    const MyApp({super.key}); // Konstruktor menggunakan const
+    const MyApp({super.key});
 
     @override
     Widget build(BuildContext context) {
         return const MaterialApp(
-        title: 'Hello World App', // Tambahkan const di sini
+        title: 'Hello World App',
         home: MyHomePage(),
         );
     }
     }
 
     class MyHomePage extends StatelessWidget {
-    const MyHomePage({super.key}); // Konstruktor menggunakan const
+    const MyHomePage({super.key});
 
     @override
     Widget build(BuildContext context) {
         return Scaffold(
         appBar: AppBar(
-            title: const Text('Hello World App'), // Tambahkan const di sini
+            title: const Text('Hello World App'),
         ),
         body: const Center(
             child: Text(
@@ -79,7 +79,7 @@ Sekarang, mari kita buat Stateful Widget yang dapat berubah selama aplikasi berj
     }
 
     class MyStatefulApp extends StatefulWidget {
-    const MyStatefulApp({super.key}); // Use super.key here
+    const MyStatefulApp({super.key});
 
     @override
     MyStatefulAppState createState() => MyStatefulAppState();
