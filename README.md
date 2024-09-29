@@ -1,150 +1,40 @@
 # Flutter Widget/Component
 
 ## Pendahuluan
-Halo! Pada tutorial ini, saya akan membuat langkah-langkah untuk menginstal Flutter **tanpa menggunakan Android Studio** dan menjalankan aplikasi Flutter sederhana yang menampilkan "Hello World!".
-
-## Persyaratan
-- Sistem operasi: **Windows**, **macOS**, atau **Linux**
-- **Flutter SDK**
-- **Android SDK** (tanpa Android Studio)
-- Emulator atau perangkat Android (opsional)
+Dalam tutorial ini, kita akan membahas konsep dasar widget, jenis-jenis widget, serta bagaimana menggunakannya untuk membangun sebuah aplikasi sederhana.
 
 ---
 
-## 1. Install Flutter SDK
+## 1. Apa itu Widget di Flutter?
+Widget di Flutter bisa diibaratkan sebagai "blok bangunan" antarmuka aplikasi. Setiap elemen UI di Flutter adalah widget, mulai dari teks sederhana hingga tata letak yang kompleks. Ada dua jenis utama widget:
 
-### a. Download Flutter SDK
+1. **Stateless Widget**: Tidak dapat berubah setelah dibuat.
+2. **Stateful Widget**: Dapat berubah seiring waktu, misalnya karena input pengguna.
 
-![image](https://github.com/user-attachments/assets/08c759bb-ab55-4e99-9ca4-7e97abed9d7d)
+## 2. Membuat Stateless Widget
+Mari kita mulai dengan membuat **Stateless Widget** yang merupakan widget yang tidak memiliki status internal.
 
-1. Buka halaman [Flutter SDK](https://flutter.dev/docs/get-started/install).
-2. Pilih sistem operasi (Windows, macOS, atau Linux).
-3. Download Flutter SDK dan ekstrak ke folder yang di inginkan. Misalnya, `C:\src\flutter` untuk Windows atau `~/flutter` untuk macOS/Linux.
-
-### b. Tambahkan Flutter ke PATH
-#### Windows:
-![image](https://github.com/user-attachments/assets/adf4f834-fe7a-4c70-8477-6613db3e8beb)
-1. Buka **Control Panel** > **System and Security** > **System**.
-2. Pilih **Advanced system settings**, klik **Environment Variables**.
-3. Pada **User variables**, pilih **Path** dan klik **Edit**.
-4. Tambahkan direktori Flutter `C:\src\flutter\bin` dan klik **OK**.
-
-### c. Verifikasi Instalasi
-![image](https://github.com/user-attachments/assets/87d9e2b4-202e-4572-837d-ae6ecd78bb1b)
-Buka terminal atau command prompt dan jalankan:
-```bash
-flutter doctor
-```
-
-## 2. Install Android SDK (Tanpa Android Studio)
-
-### a. Download Android Command Line Tools
-
-![image](https://github.com/user-attachments/assets/6278e723-cb7b-4eec-a483-a5b71836fe98)
-
-1. Buka [Android Command Line Tools](https://developer.android.com/studio#command-tools) dan download sesuai sistem operasi.
-2. Ekstrak ke folder seperti `C:\Android\cmdline-tools` (untuk Windows) atau `~/Android/cmdline-tools` (untuk macOS/Linux).
-
-### b. Tambahkan Android SDK ke PATH
-#### Windows:
-![image](https://github.com/user-attachments/assets/774f4eaa-0a16-43b3-9eca-8533aa28addc)
-1. Tambahkan `C:\Android\cmdline-tools\bin` ke Path pada Environment Variables.
-
-
-### c. Install SDK dan Tools yang Diperlukan
-1. Buka terminal atau command prompt, jalankan:
+- Langkah 1: Buka `lib/main.dart` dan modifikasi kode sebagai berikut:
     ```bash
-    sdkmanager --sdk_root="C:\path\to\your\android\sdk" --install "platform-tools" "platforms;android-33" "build-tools;33.0.0"
-    ```
-    ![image](https://github.com/user-attachments/assets/cecb6949-5c13-41d8-9e14-2be92b76d0ec)
+    import 'package:flutter/material.dart';
 
-### d. Setujui Lisensi Android SDK
-1. Setujui lisensi Android SDK dengan menjalankan:
-    ```bash
-    sdkmanager --sdk_root="C:\path\to\your\android\sdk" --licenses
-    ```
-    ![image](https://github.com/user-attachments/assets/89790759-b5c9-4079-8d09-df448c0cd2dd)
+    void main() {
+    runApp(MyApp());
+    }
 
-## 3. Konfigurasi Emulator Android
-
-### a. Install AVD Manager
-```bash
-sdkmanager --sdk_root="C:\path\to\your\android\sdk" --install "emulator" "system-images;android-33;google_apis;x86_64"
-```
-![image](https://github.com/user-attachments/assets/955698dd-c399-4573-814a-dfca6ec7fdaf)
-
-### b. Buat Emulator
-```bash
-avdmanager create avd -n flutter_emulator -k "system-images;android-33;google_apis;x86_64"
-```
-
-### c. Jalankan Emulator
-```bash
-emulator -avd flutter_emulator
-```
-
-## 4. Membuat dan Menjalankan Proyek Flutter
-
-### a. Buat Proyek Flutter
-Buka terminal dan arahkan ke folder tempat yang ingin menyimpan proyek, lalu jalankan:
-
-```bash
-flutter create hello_world
-cd hello_world
-```
-![image](https://github.com/user-attachments/assets/00e11394-049a-4acb-baf9-90463263594a)
-
-### b. Jalankan Proyek
-Jika menggunakan emulator atau perangkat Android yang sudah terhubung, jalankan perintah berikut untuk menjalankan aplikasi:
-
-```bash
-flutter run -d chrome
-```
-![image](https://github.com/user-attachments/assets/bcdcf05d-8c48-4bc1-b7d1-9326448f23a7)
-
-## 5. Modifikasi "Hello World!"
-Buka file lib/main.dart di editor teks dan ubah kode menjadi seperti ini untuk menampilkan teks "Hello World!":
-
-```bash
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MyApp()); // Tambahkan const di sini
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key}); // Konstruktor menggunakan const
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  const MyHomePage({super.key}); // Konstruktor menggunakan const
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Hello World App'), // Tambahkan const di sini
-      ),
-      body: const Center(
-        child: Text(
-          'Hello World!',
-          style: TextStyle(fontSize: 24),
+    class MyApp extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return MaterialApp(
+        home: Scaffold(
+            appBar: AppBar(
+            title: Text('Flutter Stateless Widget'),
+            ),
+            body: Center(
+            child: Text('Hello, Flutter!'),
+            ),
         ),
-      ),
-    );
-  }
-}
-
-```
-
-![image](https://github.com/user-attachments/assets/cf2706fb-1cc4-4fa9-97b5-617a1abf0d25)
-
-
+        );
+    }
+    }
+    ```
