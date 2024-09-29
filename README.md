@@ -64,3 +64,4 @@ Mari kita mulai dengan membuat **Stateless Widget** yang merupakan widget yang t
     ```bash
     flutter run -d chrome
     ```
+    Ini akan mem-build dan menjalankan aplikasi di emulator atau perangkat fisik yang terhubung. Anda akan melihat tampilan aplikasi dengan teks "Hello, Flutter!".
