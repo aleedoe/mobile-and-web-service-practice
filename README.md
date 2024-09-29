@@ -130,17 +130,17 @@ Sekarang, mari kita buat Stateful Widget yang dapat berubah selama aplikasi berj
 ## 4. Berbagai Jenis Widget di Flutter
 Berikut adalah beberapa jenis widget penting yang sering digunakan:
 
-### a. Text Widget: Menampilkan teks di layar.
+### a. **Text Widget**: Menampilkan teks di layar.
 ```dart
 Text('Ini adalah teks')
 ```
 
-### b. Image Widget: Menampilkan gambar.
+### b. **Image Widget**: Menampilkan gambar.
 ```dart
 Image.network('https://example.com/image.png')
 ```
 
-### c. Button Widget: Menambahkan tombol dengan beberapa varian, seperti ElevatedButton, TextButton, atau IconButton.
+### c. **Button Widget**: Menambahkan tombol dengan beberapa varian, seperti `ElevatedButton`, `TextButton`, atau `IconButton`.
 ```dart
 ElevatedButton(
 onPressed: () {},
@@ -148,7 +148,7 @@ child: Text('Tombol'),
 )
 ```
 
-### d. Container Widget: Widget dasar untuk menampung dan mengatur tata letak.
+### d. **Container Widget**: Widget dasar untuk menampung dan mengatur tata letak.
 ```dart
 Container(
 padding: EdgeInsets.all(16),
@@ -158,7 +158,7 @@ child: Text('Ini adalah container'),
 )
 ```
 
-### e. Row dan Column Widget: Digunakan untuk mengatur widget secara horizontal (Row) atau vertikal (Column).
+### e. **Row dan Column Widget**: Digunakan untuk mengatur widget secara horizontal (`Row`) atau vertikal (`Column`).
 ```dart
 Column(
 children: [
@@ -169,7 +169,7 @@ children: [
 )
 ```
 
-### f. ListView Widget: Digunakan untuk membuat daftar item yang dapat di-scroll.
+### f. **ListView Widget**: Digunakan untuk membuat daftar item yang dapat di-scroll.
 
 ```dart
 ListView(
@@ -181,5 +181,63 @@ children: [
 )
 ```
 
+## 5. Navigasi Antar Halaman
+Flutter mendukung navigasi antar halaman dengan mudah menggunakan `Navigator`. Mari kita buat dua halaman dan tambahkan tombol untuk navigasi.
 
+- **Langkah 1**: Buat dua halaman
+    ```dart
+    class FirstPage extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+        appBar: AppBar(
+            title: Text('Halaman Pertama'),
+        ),
+        body: Center(
+            child: ElevatedButton(
+            onPressed: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondPage()),
+                );
+            },
+            child: Text('Ke Halaman Kedua'),
+            ),
+        ),
+        );
+    }
+    }
 
+    class SecondPage extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+        appBar: AppBar(
+            title: Text('Halaman Kedua'),
+        ),
+        body: Center(
+            child: ElevatedButton(
+            onPressed: () {
+                Navigator.pop(context);
+            },
+            child: Text('Kembali ke Halaman Pertama'),
+            ),
+        ),
+        );
+    }
+    }
+
+    ```
+
+- **Langkah 2**: Tambahkan Navigasi di main.dart
+    Modifikasi fungsi `build()` di `MyApp` menjadi seperti ini:
+
+    ```dart
+    @override
+    Widget build(BuildContext context) {
+    return MaterialApp(
+        home: FirstPage(),
+    );
+    }
+
+    ```
