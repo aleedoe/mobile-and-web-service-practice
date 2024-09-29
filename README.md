@@ -247,3 +247,4 @@ Flutter mendukung navigasi antar halaman dengan mudah menggunakan `Navigator`. M
     }
 
     ```
+![image](https://github.com/user-attachments/assets/46560c66-969e-43a1-b124-b0c1dcf8ccb8) ![image](https://github.com/user-attachments/assets/00149840-f543-4d15-a544-95153ed302a2)
