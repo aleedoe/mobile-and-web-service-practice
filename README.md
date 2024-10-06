@@ -192,6 +192,74 @@ Di `main.dar`t, impor kedua halaman dan atur halaman awal aplikasi menjadi `Firs
     }
 ```
 
+**Output**:
+- Di halaman pertama, ada tombol untuk berpindah ke halaman kedua.
+- Di halaman kedua, ada tombol untuk kembali ke halaman pertama.
+
 **Hasil**:
 ![image](https://github.com/user-attachments/assets/6f4b9367-5faa-46bc-b43b-0da0b73b02a1)
 
+
+### Navigasi dengan Data (Passing Data Antar Halaman)
+Kadang-kadang, Anda perlu mengirim data antar halaman. Flutter memungkinkan Anda untuk mengirim data saat melakukan navigasi.
+
+- Modifikasi `first_page.dart` untuk Mengirim Data:
+  ```dart
+    import 'package:flutter/material.dart';
+    import 'second_page.dart';
+
+    class FirstPage extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+        appBar: AppBar(title: Text('Halaman Pertama')),
+        body: Center(
+            child: ElevatedButton(
+            onPressed: () {
+                Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondPage(data: 'Hello from First Page!')),
+                );
+            },
+            child: Text('Ke Halaman Kedua dengan Data'),
+            ),
+        ),
+        );
+    }
+    }
+
+  ```
+- Modifikasi `second_page.dart` untuk Menerima Data:
+  ```dart
+    import 'package:flutter/material.dart';
+
+    class SecondPage extends StatelessWidget {
+    final String data;
+
+    SecondPage({required this.data});
+
+    @override
+    Widget build(BuildContext context) {
+        return Scaffold(
+        appBar: AppBar(title: Text('Halaman Kedua')),
+        body: Center(
+            child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+                Text(data), // Menampilkan data yang dikirim dari halaman pertama
+                ElevatedButton(
+                onPressed: () {
+                    Navigator.pop(context);
+                },
+                child: Text('Kembali ke Halaman Pertama'),
+                ),
+            ],
+            ),
+        ),
+        );
+    }
+    }
+
+  ```
+**Output**:
+Saat Anda menekan tombol di halaman pertama, halaman kedua akan ditampilkan dengan data "Hello from First Page!" yang dikirim dari halaman pertama.
