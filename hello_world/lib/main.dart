@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/first_page.dart';
+import 'pages/listview_page.dart';
 
 void main() {
   runApp( const MyApp());
@@ -10,11 +10,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Navigation',
+      title: 'Flutter listview',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const FirstPage(), // Halaman awal aplikasi
+      home: ListViewPage(), // Halaman awal aplikasi
     );
   }
 }
