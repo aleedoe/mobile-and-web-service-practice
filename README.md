@@ -174,6 +174,8 @@ class HomePage extends StatelessWidget {
 - `Navigator.push`: digunakan untuk berpindah ke halaman baru. Di sini, kita membuat tombol untuk mengarahkan ke halaman **ListView** dan **GridView**.
 - Halaman HomePage menjadi halaman utama yang menampilkan dua tombol untuk navigasi.
 
+**Hasil**:
+![image](https://github.com/user-attachments/assets/23a43610-e7ff-4bf2-8bcd-b3e0d28bb870)
 
 ## 4 Menambahkan Navigasi Kembali
 Untuk menavigasi kembali ke halaman sebelumnya, cukup gunakan Navigator.pop pada halaman yang dituju. Misalnya, pada halaman `listview_page.dart`:
