@@ -50,7 +50,6 @@ class ListViewPage extends StatelessWidget {
 - **ListTile**: adalah widget yang ideal untuk menampilkan item daftar dengan leading (ikon) dan title (teks).
 
 **Hasil**:
-
 ![image](https://github.com/user-attachments/assets/5579f07c-a27f-49c9-9282-b9d6e5a14e63)
 
 
@@ -99,7 +98,7 @@ class GridViewPage extends StatelessWidget {
 - **Card** : digunakan untuk menampilkan item dalam tampilan kartu..
 
 **Hasil**:
-![image](https://github.com/user-attachments/assets/6f4b9367-5faa-46bc-b43b-0da0b73b02a1)
+![image](https://github.com/user-attachments/assets/11efb53a-d277-403e-9160-d92945311e28)
 
 
 ## 3. Flutter Navigation (Navigasi antar Halaman)

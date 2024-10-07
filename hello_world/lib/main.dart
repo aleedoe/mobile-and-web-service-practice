@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/listview_page.dart';
+import 'pages/gridview_page.dart';
 
 void main() {
   runApp( const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ListViewPage(), // Halaman awal aplikasi
+      home: GridViewPage(), // Halaman awal aplikasi
     );
   }
 }
