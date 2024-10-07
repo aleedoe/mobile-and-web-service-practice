@@ -8,258 +8,197 @@
 ---
 
 
-1. **Stateless Widget**: Tidak dapat berubah setelah dibuat.
-2. **Stateful Widget**: Dapat berubah seiring waktu, misalnya karena input pengguna.
-
 ## 1. ListView di Flutter
 `ListView` adalah widget yang digunakan untuk menampilkan daftar item yang dapat di-scroll secara vertikal. Anda bisa menggunakan `ListView` untuk menampilkan daftar teks, gambar, atau widget lainnya.
 
-- **Contoh Penggunaan ListView**:
-    ```dart
-        import 'package:flutter/material.dart';
+a. **Menambahkan ListView Sederhana**:
+Buat file `lib/pages/listview_page.dart` untuk menampilkan daftar item:
+```dart
+import 'package:flutter/material.dart';
 
-        void main() {
-        runApp(MyApp());
-        }
+class ListViewPage extends StatelessWidget {
+  final List<String> items = List<String>.generate(20, (i) => "Item $i");
 
-        class MyApp extends StatelessWidget {
-        @override
-        Widget build(BuildContext context) {
-            return MaterialApp(
-            home: Scaffold(
-                appBar: AppBar(title: Text('Flutter ListView')),
-                body: ListView(
-                children: <Widget>[
-                    ListTile(
-                    leading: Icon(Icons.map),
-                    title: Text('Map'),
-                    ),
-                    ListTile(
-                    leading: Icon(Icons.photo),
-                    title: Text('Photo'),
-                    ),
-                    ListTile(
-                    leading: Icon(Icons.phone),
-                    title: Text('Phone'),
-                    ),
-                ],
-                ),
-            ),
-            );
-        }
-        }
-    ```
-    **Penjelasan Kode**:
-    - **ListView**: Widget yang menampilkan daftar item secara vertikal dan bisa di-scroll.
-    - **ListTile**: Widget yang cocok untuk menampilkan daftar item sederhana dengan leading (ikon), title, subtitle, dan trailing (opsional).
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('ListView Example'),
+      ),
+      body: ListView.builder(
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return ListTile(
+            leading: Icon(Icons.list),
+            title: Text(items[index]),
+            onTap: () {
+              // Aksi saat item ditekan
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                content: Text('You tapped on ${items[index]}'),
+              ));
+            },
+          );
+        },
+      ),
+    );
+  }
+}
+
+```
+**Penjelasan Kode**:
+- **ListView.builder**: digunakan untuk membuat daftar dinamis dengan jumlah item yang besar.
+- **ListTile**: adalah widget yang ideal untuk menampilkan item daftar dengan leading (ikon) dan title (teks).
 
 
 ## 2. GridView di Flutter
 `GridView` digunakan untuk menampilkan data dalam tata letak grid (baris dan kolom). Anda dapat menggunakannya untuk menampilkan galeri gambar atau kumpulan data lainnya.
 
-- **Contoh Penggunaan GridView**:
-    ```dart
-        import 'package:flutter/material.dart';
-
-        void main() {
-        runApp(MyApp());
-        }
-
-        class MyApp extends StatelessWidget {
-        @override
-        Widget build(BuildContext context) {
-            return MaterialApp(
-            home: Scaffold(
-                appBar: AppBar(title: Text('Flutter GridView')),
-                body: GridView.count(
-                crossAxisCount: 2,
-                children: <Widget>[
-                    Container(
-                    padding: EdgeInsets.all(8),
-                    color: Colors.red,
-                    child: const Text('Item 1'),
-                    ),
-                    Container(
-                    padding: EdgeInsets.all(8),
-                    color: Colors.blue,
-                    child: const Text('Item 2'),
-                    ),
-                    Container(
-                    padding: EdgeInsets.all(8),
-                    color: Colors.green,
-                    child: const Text('Item 3'),
-                    ),
-                    Container(
-                    padding: EdgeInsets.all(8),
-                    color: Colors.yellow,
-                    child: const Text('Item 4'),
-                    ),
-                ],
-                ),
-            ),
-            );
-        }
-        }
-
-    ```
-    **Penjelasan Kode**:
-    - `GridView.count`: Membuat grid dengan jumlah kolom tetap. Dalam contoh ini, grid memiliki 2 kolom (`crossAxisCount: 2`).
-    - Setiap Container berfungsi sebagai item grid yang bisa Anda modifikasi dengan berbagai properti seperti `padding`, `color`, dan `child`.
-
-    **Hasil**:
-    ![image](https://github.com/user-attachments/assets/6f4b9367-5faa-46bc-b43b-0da0b73b02a1)
-
-
-## 3. Flutter Navigation (Navigasi antar Halaman)
-Flutter menyediakan cara yang mudah untuk berpindah antar halaman menggunakan widget `Navigator` dan metode `push` serta `pop`. Metode `push` digunakan untuk berpindah ke halaman baru, sementara `pop` digunakan untuk kembali ke halaman sebelumnya.
-
-- **Contoh Flutter Navigation Sederhana**:
-   
-   Buat dua file halaman terpisah: `first_page.dart` dan `second_page.dart`.
-
-   **File** `first_page.dart`
-    ```dart
-        import 'package:flutter/material.dart';
-        import 'second_page.dart';
-
-        class FirstPage extends StatelessWidget {
-        @override
-        Widget build(BuildContext context) {
-            return Scaffold(
-            appBar: AppBar(title: Text('Halaman Pertama')),
-            body: Center(
-                child: ElevatedButton(
-                onPressed: () {
-                    Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SecondPage()),
-                    );
-                },
-                child: Text('Ke Halaman Kedua'),
-                ),
-            ),
-            );
-        }
-        }
-
-    ```
-
-   **File** `second_page.dart`
-    ```dart
-        import 'package:flutter/material.dart';
-
-        class SecondPage extends StatelessWidget {
-        @override
-        Widget build(BuildContext context) {
-            return Scaffold(
-            appBar: AppBar(title: Text('Halaman Kedua')),
-            body: Center(
-                child: ElevatedButton(
-                onPressed: () {
-                    Navigator.pop(context); // Kembali ke halaman pertama
-                },
-                child: Text('Kembali ke Halaman Pertama'),
-                ),
-            ),
-            );
-        }
-        }
-
-    ```
-    **Penjelasan Kode**:
-    - `Navigator.push`: Digunakan untuk navigasi ke halaman baru. `MaterialPageRoute` menentukan halaman tujuan.
-    - `Navigator.pop`: Digunakan untuk kembali ke halaman sebelumnya.
-
-
-### Menghubungkan Halaman di main.dart
-Di `main.dar`t, impor kedua halaman dan atur halaman awal aplikasi menjadi `FirstPage`.
-
+a. **Menambahkan GridView Sederhana**:
+Buat file `lib/pages/gridview_page.dart` untuk menampilkan grid item:
 ```dart
-    import 'package:flutter/material.dart';
-    import 'pages/first_page.dart';
+import 'package:flutter/material.dart';
 
-    void main() {
-    runApp(MyApp());
-    }
+class GridViewPage extends StatelessWidget {
+  final List<String> items = List<String>.generate(20, (i) => "Item $i");
 
-    class MyApp extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-        return MaterialApp(
-        home: FirstPage(),
-        );
-    }
-    }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('GridView Example'),
+      ),
+      body: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2, // Jumlah item per baris
+        ),
+        itemCount: items.length,
+        itemBuilder: (context, index) {
+          return Card(
+            color: Colors.blueAccent,
+            child: Center(
+              child: Text(
+                items[index],
+                style: TextStyle(color: Colors.white, fontSize: 18),
+              ),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
 ```
-
-**Output**:
-- Di halaman pertama, ada tombol untuk berpindah ke halaman kedua.
-- Di halaman kedua, ada tombol untuk kembali ke halaman pertama.
+**Penjelasan Kode**:
+- `GridView.builder`: digunakan untuk membuat grid dinamis.
+- **SliverGridDelegateWithFixedCrossAxisCount** : menentukan berapa banyak item yang akan ditampilkan di setiap baris (contohnya, 2 item per baris).
+- **Card** : digunakan untuk menampilkan item dalam tampilan kartu..
 
 **Hasil**:
 ![image](https://github.com/user-attachments/assets/6f4b9367-5faa-46bc-b43b-0da0b73b02a1)
 
 
-### Navigasi dengan Data (Passing Data Antar Halaman)
-Kadang-kadang, Anda perlu mengirim data antar halaman. Flutter memungkinkan Anda untuk mengirim data saat melakukan navigasi.
+## 3. Flutter Navigation (Navigasi antar Halaman)
+Flutter menyediakan cara yang mudah untuk berpindah antar halaman menggunakan widget `Navigator` dan metode `push` serta `pop`. Metode `push` digunakan untuk berpindah ke halaman baru, sementara `pop` digunakan untuk kembali ke halaman sebelumnya.
 
-- Modifikasi `first_page.dart` untuk Mengirim Data:
-  ```dart
-    import 'package:flutter/material.dart';
-    import 'second_page.dart';
+a.  **Contoh Flutter Navigation Sederhana**:
+menghubungkan halaman-halaman **ListView** dan **GridView** dengan halaman utama menggunakan navigasi.
 
-    class FirstPage extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-        appBar: AppBar(title: Text('Halaman Pertama')),
-        body: Center(
-            child: ElevatedButton(
-            onPressed: () {
+Buka file `lib/main.dart` dan buat tombol untuk mengarahkan ke halaman **ListView** dan **GridView**:
+
+```dart
+import 'package:flutter/material.dart';
+import 'pages/listview_page.dart';
+import 'pages/gridview_page.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Navigation Example',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Home Page'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(
+              onPressed: () {
                 Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SecondPage(data: 'Hello from First Page!')),
+                  context,
+                  MaterialPageRoute(builder: (context) => ListViewPage()),
                 );
-            },
-            child: Text('Ke Halaman Kedua dengan Data'),
+              },
+              child: Text('Go to ListView Page'),
             ),
-        ),
-        );
-    }
-    }
-
-  ```
-- Modifikasi `second_page.dart` untuk Menerima Data:
-  ```dart
-    import 'package:flutter/material.dart';
-
-    class SecondPage extends StatelessWidget {
-    final String data;
-
-    SecondPage({required this.data});
-
-    @override
-    Widget build(BuildContext context) {
-        return Scaffold(
-        appBar: AppBar(title: Text('Halaman Kedua')),
-        body: Center(
-            child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-                Text(data), // Menampilkan data yang dikirim dari halaman pertama
-                ElevatedButton(
-                onPressed: () {
-                    Navigator.pop(context);
-                },
-                child: Text('Kembali ke Halaman Pertama'),
-                ),
-            ],
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => GridViewPage()),
+                );
+              },
+              child: Text('Go to GridView Page'),
             ),
+          ],
         ),
-        );
-    }
-    }
+      ),
+    );
+  }
+}
 
-  ```
-**Output**:
-Saat Anda menekan tombol di halaman pertama, halaman kedua akan ditampilkan dengan data "Hello from First Page!" yang dikirim dari halaman pertama.
+```
+
+**Penjelasan Kode**:
+- `Navigator.push`: digunakan untuk berpindah ke halaman baru. Di sini, kita membuat tombol untuk mengarahkan ke halaman **ListView** dan **GridView**.
+- Halaman HomePage menjadi halaman utama yang menampilkan dua tombol untuk navigasi.
+
+
+## 4 Menambahkan Navigasi Kembali
+Untuk menavigasi kembali ke halaman sebelumnya, cukup gunakan Navigator.pop pada halaman yang dituju. Misalnya, pada halaman `listview_page.dart`:
+
+```dart
+...
+onTap: () {
+  Navigator.pop(context); // Kembali ke halaman sebelumnya
+},
+...
+
+```
+
+## Struktur Final Project
+
+```css
+lib/
+├── main.dart
+└── pages/
+    ├── gridview_page.dart
+    └── listview_page.dart
+
+```
+
+---
+
+## Referensi
+
+- [Flutter Documentation - ListView](https://api.flutter.dev/flutter/widgets/ListView-class.html)
+- [Flutter Documentation - GridView](https://api.flutter.dev/flutter/widgets/GridView-class.html)
+- [Flutter Documentation - Navigation](https://docs.flutter.dev/ui/navigation)
