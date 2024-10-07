@@ -49,7 +49,8 @@ class ListViewPage extends StatelessWidget {
 - **ListView.builder**: digunakan untuk membuat daftar dinamis dengan jumlah item yang besar.
 - **ListTile**: adalah widget yang ideal untuk menampilkan item daftar dengan leading (ikon) dan title (teks).
 
-**Hasil**
+**Hasil**:
+
 ![image](https://github.com/user-attachments/assets/5579f07c-a27f-49c9-9282-b9d6e5a14e63)
 
 
