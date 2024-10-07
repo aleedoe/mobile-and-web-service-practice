@@ -91,7 +91,7 @@ class GridViewPage extends StatelessWidget {
 ```
 **Penjelasan Kode**:
 - `GridView.builder`: digunakan untuk membuat grid dinamis.
-- **SliverGridDelegateWithFixedCrossAxisCount** : menentukan berapa banyak item yang akan ditampilkan di setiap baris (contohnya, 2 item per baris).
+- `SliverGridDelegateWithFixedCrossAxisCount` : menentukan berapa banyak item yang akan ditampilkan di setiap baris (contohnya, 2 item per baris).
 - **Card** : digunakan untuk menampilkan item dalam tampilan kartu..
 
 **Hasil**:
